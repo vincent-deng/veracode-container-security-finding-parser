@@ -1,0 +1,136 @@
+{
+  "type": "image",
+  "raw_name": "juliantotzek/verademo1-tomcat:latest",
+  "name": "juliantotzek_verademo1-tomcat",
+  "docker": {
+    "Id": "sha256:9a98b1ba2d2a2e87191b409bb74baeec722a397cb09ff6a7cab97bfafa8b175a",
+    "RepoTags": [
+      "juliantotzek/verademo1-tomcat:latest"
+    ],
+    "RepoDigests": [
+      "juliantotzek/verademo1-tomcat@sha256:7b629d6094210137f0cbcdd7b0d39e8fc07924b9c293239a6105dd37d9ecb35b"
+    ],
+    "Parent": "",
+    "Comment": "",
+    "Created": "2019-04-29T19:40:43.838593361Z",
+    "Container": "114630b1b6a47c03f3492bb3d4624aa35f5b0bd45d47b80de19b518d238a5b72",
+    "ContainerConfig": {
+      "Hostname": "",
+      "Domainname": "",
+      "User": "root",
+      "AttachStdin": false,
+      "AttachStdout": false,
+      "AttachStderr": false,
+      "ExposedPorts": {
+        "8080/tcp": {},
+        "8443/tcp": {}
+      },
+      "Tty": false,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/java/bin:/opt/tomcat/bin:/opt/tomcat/scripts",
+        "JAVA_HOME=/opt/java",
+        "CATALINA_HOME=/opt/tomcat",
+        "ADMIN_PASS=",
+        "CERT_PASS="
+      ],
+      "Cmd": [
+        "/bin/sh",
+        "-c",
+        "yum update -y && yum install -y python"
+      ],
+      "ArgsEscaped": true,
+      "Image": "sha256:e5f3dbf5eee0aa7b262cf20cd10d1c2aa4f838a9717aa436977d18fe152de16b",
+      "Volumes": null,
+      "WorkingDir": "",
+      "Entrypoint": null,
+      "OnBuild": [],
+      "Labels": {
+        "build-date": "20180107",
+        "license": "GPLv2",
+        "name": "CentOS Base Image",
+        "vendor": "CentOS"
+      }
+    },
+    "DockerVersion": "18.09.2",
+    "Author": "",
+    "Config": {
+      "Hostname": "",
+      "Domainname": "",
+      "User": "root",
+      "AttachStdin": false,
+      "AttachStdout": false,
+      "AttachStderr": false,
+      "ExposedPorts": {
+        "8080/tcp": {},
+        "8443/tcp": {}
+      },
+      "Tty": false,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/java/bin:/opt/tomcat/bin:/opt/tomcat/scripts",
+        "JAVA_HOME=/opt/java",
+        "CATALINA_HOME=/opt/tomcat",
+        "ADMIN_PASS=",
+        "CERT_PASS="
+      ],
+      "Cmd": [
+        "/run.sh"
+      ],
+      "ArgsEscaped": true,
+      "Image": "sha256:e5f3dbf5eee0aa7b262cf20cd10d1c2aa4f838a9717aa436977d18fe152de16b",
+      "Volumes": null,
+      "WorkingDir": "",
+      "Entrypoint": null,
+      "OnBuild": [],
+      "Labels": {
+        "build-date": "20180107",
+        "license": "GPLv2",
+        "name": "CentOS Base Image",
+        "vendor": "CentOS"
+      }
+    },
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 2536069925,
+    "VirtualSize": 2536069925,
+    "GraphDriver": {
+      "Data": {
+        "LowerDir": "/var/lib/docker/overlay2/551d0393e286a49595876a6c1c676c415d4da645b387f5a61940d445f443d416/diff:/var/lib/docker/overlay2/0a1dae052fbf4c76d531ffadb5d92337e6452c04a31b444627d951f6b2e6e389/diff:/var/lib/docker/overlay2/5d2a84e19826b31614c69046a35d58e2cdf0f663f4247a4e3a7142bfacc884cc/diff:/var/lib/docker/overlay2/852c644b720d542d90836f5d9883a65ed43a00a2f34fdc0548a2c670e5882829/diff:/var/lib/docker/overlay2/c274b303e32619b0ca26745c3985d699b6a90cd617ae00a01216e60d5884b838/diff:/var/lib/docker/overlay2/6a78ca01f0d68f2c1b189c5fba6762ad28106d735785aaf63b14d777c0e7e5f4/diff:/var/lib/docker/overlay2/ae68389e1f01002ed6e1abe836517afb7e5c40649639e941e5ff52a18664be49/diff:/var/lib/docker/overlay2/9fb13407bb004744b739061a7cc367cce1459070653daa5a09d621c2e4a5c9c5/diff:/var/lib/docker/overlay2/c3aeddd9cea6afe2b28b0a002ab0bc63a56c4e32a9b819f46104bf5e3b6af2c3/diff:/var/lib/docker/overlay2/c15eb134dac64ef321d193dc913c05db63eb261bf0599a32b8032a08c657ec0e/diff:/var/lib/docker/overlay2/212627dc4c7761ef30025f74b42cdf149ad8b690876bd2a573ab9fd78053f0b3/diff:/var/lib/docker/overlay2/4b17cd80318ab839971e00b078a53646721afe9a8f00ce2ad830e9f45e63fbb1/diff:/var/lib/docker/overlay2/820cdaeb98a9aa5cb0816539b208627aeb4f5ff1b346f343a303637d6ef128b6/diff:/var/lib/docker/overlay2/f94d748494adf0ede5b2f9710c51eac0a6672fdd6485211285f1d89439b39b6f/diff:/var/lib/docker/overlay2/1e790f9ffd9990bcfe54fd499086e91f14154b2cd6de3f1aa2c2111485780138/diff:/var/lib/docker/overlay2/cf79a8e210f3ea928203b204c0497778ade60ee51cc1888cb3768f8dc8428fa7/diff:/var/lib/docker/overlay2/adf824c47634d30e3374e4e431e0a88eb96e4af9edc95432d16002b19c4fd313/diff",
+        "MergedDir": "/var/lib/docker/overlay2/881dd1d93726be33ab087fd9a7c84bc518de059c9da9c94c7cb17e35d0df84ef/merged",
+        "UpperDir": "/var/lib/docker/overlay2/881dd1d93726be33ab087fd9a7c84bc518de059c9da9c94c7cb17e35d0df84ef/diff",
+        "WorkDir": "/var/lib/docker/overlay2/881dd1d93726be33ab087fd9a7c84bc518de059c9da9c94c7cb17e35d0df84ef/work"
+      },
+      "Name": "overlay2"
+    },
+    "RootFS": {
+      "Type": "layers",
+      "Layers": [
+        "sha256:e15afa4858b655f8a5da4c4a41e05b908229f6fab8543434db79207478511ff7",
+        "sha256:7f27edf15cf7ee90a7f1dac26dc8f62ead50080c942f29d2dec479ea49894917",
+        "sha256:ae049fc77bb0d70011ee98bb17646023dd88e06b3802699004ebbda5e3272070",
+        "sha256:0dc29a44b843cd937d286172bd6fce9da028147447f48e57d9febe5113823ede",
+        "sha256:21dc7dc46dd2732a8a3a41463634f68e793889500c00d81398449ca47799fb1a",
+        "sha256:fd0d20f03a64ed2c5887ab04b832f999e991a29cdf0fab88489a4725465d2002",
+        "sha256:1c5ac96bfa08fb93e3f423266dd67bb3de296d57f82ae0c7b896d32b9101c2cd",
+        "sha256:c25e00de70341d866fc2d28f6f23164b2f658d3a1cf3b2958f264af2eefae7b9",
+        "sha256:bef58c85f404d9be9f9e301ccbd4ede0dab72f07b2d195b7502b55266d37d4d7",
+        "sha256:ba0b97362f88b30f8fcbf18fd3c9e81cb4c2bcddfc2fea8e0972cfd7a5ad4959",
+        "sha256:76a2ef8cb0b1c178646f459495f9d38fe9d53e509cbb6c5fbee6394d850a8420",
+        "sha256:3ba218d483d4dd8e3001f8d496d233b9f00acc2d466bbfe90315a07c06b795a9",
+        "sha256:e55a60318fb191d802379d7def4fb8d6cc36eb069edb5f7f39472a6e6318607e",
+        "sha256:c9f3c99847d24da7b7170967f2ef9d8979ef19aca7a70c45efb982ecfad79ad7",
+        "sha256:ef1f2f67c4a98ac352a8f4523e045cf8c8601680995d6b8f71222ad793e9f0f1",
+        "sha256:ef0cb8a9d09ef4392fb93d02423b2f436cb7206b601b2904ec3250f675e6f6db",
+        "sha256:4544169705aa674167fc160e0e5f28d890a0c6f07408f0b3de350a693a1eaaee",
+        "sha256:c7301f13f8c24cb5e5313434771276a606046bf6e0d509421f1db6a0bdd032c3"
+      ]
+    },
+    "Metadata": {
+      "LastTagTime": "0001-01-01T00:00:00Z"
+    }
+  },
+  "id": "sha256:9a98b1ba2d2a2e87191b409bb74baeec722a397cb09ff6a7cab97bfafa8b175a"
+}
