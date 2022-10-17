@@ -1,5 +1,6 @@
 import json
 import argparse
+from collections import defaultdict
 
 
 def main():
@@ -27,6 +28,7 @@ def main():
     layers = inspect_data['docker']['RootFS']['Layers']
 
     layer_vulnerabilities_dict = dict()
+    base_image_vulnerabilities_severity_count_dict = defaultdict(int)
 
     layer_index = 1
 
@@ -64,13 +66,21 @@ def main():
             layer_vulnerabilities_dict[layer_id]['vulnerabilities'].add(
                 (
                     vulnerability['id'], vulnerability['severity']
-                    # vulnerability['description'],
-                    # vulnerability['namespace']
                 )
             )
+            base_image_vulnerabilities_severity_count_dict[vulnerability['severity']] += 1
 
-    print('Scanned Image: ' + image + ', Base Image OS Family: ' +
-          base_image['OS Family'] + ' , Base Image OS Name: ' + base_image['OS Name'] + '\n')
+    print('\nThe scanned image: ' + image, end='')
+    print(', has a total of ' + str(sum(base_image_vulnerabilities_severity_count_dict.values()))
+          + ' vulnerabilities.')
+
+    for severity, count in base_image_vulnerabilities_severity_count_dict.items():
+        print(' - ' + severity + ': ' + str(count))
+
+    print('-----------------------------------------------------------------')
+    print('Base Image OS Family: ' +
+          base_image['OS Family'] + ' , Base Image OS Name: ' + base_image['OS Name'])
+    print('-----------------------------------------------------------------')
 
     for layer_id in layer_vulnerabilities_dict:
         if layer_vulnerabilities_dict[layer_id]['layer_num'] == 1:
@@ -81,7 +91,12 @@ def main():
         layer = layer_vulnerabilities_dict[layer_id]
         layer_num = layer['layer_num']
         vul_count = len(layer['vulnerabilities'])
+        output_dict = defaultdict(int)
+        for _, severity in layer['vulnerabilities']:
+            output_dict[severity] += 1
         print('Layer ' + str(layer_num) + ' (' + layer_id + ') has a count of ' + str(vul_count) + ' vulnerabilities.')
+        for severity, count in output_dict.items():
+            print(' - ' + severity + ': ' + str(count))
 
     if detailed_report:
         print('\n')
@@ -91,7 +106,6 @@ def main():
             layer_num = layer['layer_num']
             print('Layer ' + str(layer_num) + ' Vulnerabilities:')
             print(layer['vulnerabilities'])
-            # print(layer['vulnerabilities'])
 
 
 if __name__ == "__main__":
